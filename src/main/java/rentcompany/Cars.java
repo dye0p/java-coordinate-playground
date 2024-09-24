@@ -23,10 +23,18 @@ public class Cars {
     }
 
     private String createResultString(Car car) {
-        return car.getName()
+        return formatResult(car.getName(), getChargeQuantityAsInt(car));
+    }
+
+    private String formatResult(String carName, int chargeQuantity) {
+        return carName
                 + NAME_TO_QUANTITY_SEPARATOR
-                + (int) car.getChargeQuantity()
+                + chargeQuantity
                 + LITER_UNIT
                 + NEWLINE;
+    }
+
+    private int getChargeQuantityAsInt(Car car) {
+        return (int) car.getChargeQuantity();
     }
 }
