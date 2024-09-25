@@ -8,7 +8,7 @@ public class Cars {
 
     public static final String NAME_TO_QUANTITY_SEPARATOR = " : ";
     public static final String LITER_UNIT = "리터";
-    public static final String NEWLINE = "\n";
+    public static final String NEWLINE = System.lineSeparator();
 
     private final List<Car> cars = new ArrayList<>();
 
